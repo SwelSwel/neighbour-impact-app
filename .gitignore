@@ -1,0 +1,20 @@
+# Python
+__pycache__/
+*.pyc
+.pytest_cache/
+.venv/
+.ipynb_checkpoints/
+
+# Secrets
+.env
+
+# Raw data and notebook outputs (they stay in the Data folder)
+*.csv
+*.npz
+*.pkl
+impact_outputs/
+
+# OS / editor
+Thumbs.db
+.DS_Store
+.vscode/

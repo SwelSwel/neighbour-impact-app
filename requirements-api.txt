@@ -1,0 +1,12 @@
+# Model runtime: must match the versions the bundle was trained with (printed by notebook section 19b)
+scikit-learn==1.8.0
+numpy==2.4.4
+joblib==1.6.0
+# Data store (parquet files from notebook section 19c) and uploads
+pandas==3.0.5
+pyarrow==26.0.1
+python-multipart==0.0.32
+# API
+fastapi==0.162.0
+uvicorn[standard]==0.54.0
+pydantic==2.13.5

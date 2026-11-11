@@ -1,0 +1,12 @@
+# Look of the website. Streamlit reads this file at start-up (restart streamlit after editing).
+# Colours: any hex code. Fonts: "sans-serif", "serif", "monospace", or a Google Font as "Name:URL".
+
+[theme]
+base = "light"
+primaryColor = "#1F5AA6"              # buttons, sliders, links, selected tabs
+backgroundColor = "#FFFFFF"           # page background
+secondaryBackgroundColor = "#F2F5F9"  # input boxes, tables, sidebar
+textColor = "#1E2733"                 # almost all text
+font = "Plus Jakarta Sans:https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+headingFont = "Space Grotesk:https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&display=swap"
+baseFontSize = 15

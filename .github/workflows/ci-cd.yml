@@ -1,0 +1,142 @@
+# CI/CD: test -> build -> push to Azure Container Registry -> deploy to Azure Container Apps -> smoke test (-> rollback)
+name: CI/CD
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  id-token: write      # OpenID Connect login to Azure (no stored passwords)
+  contents: read
+
+concurrency:
+  group: deploy-${{ github.ref }}
+  cancel-in-progress: false
+
+env:
+  RESOURCE_GROUP: ${{ vars.RESOURCE_GROUP }}
+  ACR_NAME: ${{ vars.ACR_NAME }}
+  ACA_ENV: ${{ vars.ACA_ENV }}
+  API_APP: ${{ vars.API_APP }}
+  UI_APP: ${{ vars.UI_APP }}
+  IDENTITY_ID: ${{ vars.PULL_IDENTITY_ID }}
+  TAG: ${{ github.sha }}
+
+jobs:
+  test:
+    name: Automated tests
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+          cache: pip
+      - run: pip install -r requirements-dev.txt
+      - name: Run tests (consistency with the notebook, API behaviour, failure scenarios)
+        run: pytest -v --junitxml=test-results.xml
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: test-results
+          path: test-results.xml
+
+  build-and-deploy:
+    name: Build, push and deploy
+    needs: test
+    if: github.event_name != 'pull_request'
+    runs-on: ubuntu-latest
+    environment: production
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Azure login (OIDC)
+        uses: azure/login@v2
+        with:
+          client-id: ${{ secrets.AZURE_CLIENT_ID }}
+          tenant-id: ${{ secrets.AZURE_TENANT_ID }}
+          subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
+
+      - name: Build and push images (tagged with the commit SHA)
+        run: |
+          az acr login --name "$ACR_NAME"
+          REG="$ACR_NAME.azurecr.io"
+          docker build -f Dockerfile.api --build-arg APP_VERSION="$TAG" -t "$REG/neighbour-api:$TAG" .
+          docker build -f Dockerfile.ui -t "$REG/neighbour-ui:$TAG" .
+          docker push "$REG/neighbour-api:$TAG"
+          docker push "$REG/neighbour-ui:$TAG"
+
+      - name: Deploy API
+        env:
+          API_KEY: ${{ secrets.API_KEY }}
+        run: |
+          REG="$ACR_NAME.azurecr.io"
+          if az containerapp show -n "$API_APP" -g "$RESOURCE_GROUP" >/dev/null 2>&1; then
+            PREV=$(az containerapp show -n "$API_APP" -g "$RESOURCE_GROUP" --query "properties.template.containers[0].image" -o tsv)
+            echo "PREV_API_IMAGE=$PREV" >> "$GITHUB_ENV"
+            az containerapp update -n "$API_APP" -g "$RESOURCE_GROUP" --image "$REG/neighbour-api:$TAG" \
+              --set-env-vars APP_VERSION="$TAG" -o none
+          else
+            az containerapp create -n "$API_APP" -g "$RESOURCE_GROUP" --environment "$ACA_ENV" \
+              --image "$REG/neighbour-api:$TAG" --registry-server "$REG" \
+              --registry-identity "$IDENTITY_ID" --user-assigned "$IDENTITY_ID" \
+              --target-port 8000 --ingress external --cpu 0.5 --memory 1.0Gi --min-replicas 0 --max-replicas 2 \
+              --secrets api-key="$API_KEY" \
+              --env-vars API_KEY=secretref:api-key APP_VERSION="$TAG" LOG_LEVEL=INFO DEGRADED_THRESHOLD=0.20 SEVERE_THRESHOLD=0.50 \
+              -o none
+          fi
+          echo "API_FQDN=$(az containerapp show -n "$API_APP" -g "$RESOURCE_GROUP" --query properties.configuration.ingress.fqdn -o tsv)" >> "$GITHUB_ENV"
+
+      - name: Smoke test API (new version is live and predicts)
+        env:
+          API_KEY: ${{ secrets.API_KEY }}
+        run: |
+          for i in $(seq 1 30); do
+            V=$(curl -fsS "https://$API_FQDN/health" | python -c "import sys,json; print(json.load(sys.stdin)['version'])" || true)
+            [ "$V" = "$TAG" ] && break; echo "waiting for new revision ($i)"; sleep 10
+          done
+          [ "$V" = "$TAG" ] || { echo "new revision did not become live"; exit 1; }
+          curl -fsS "https://$API_FQDN/ready"
+          curl -fsS -H "X-API-Key: $API_KEY" "https://$API_FQDN/example" -o body.json
+          curl -fsS -H "X-API-Key: $API_KEY" -H "Content-Type: application/json" -d @body.json \
+               "https://$API_FQDN/predict" -o result.json
+          python -c "import json; r=json.load(open('result.json')); assert r['neighbours'] and r['app_version']=='$TAG'; print('predict OK:', len(r['neighbours']), 'neighbours')"
+          # Data store: the first real outage, looked up by cell and time only
+          curl -fsS -H "X-API-Key: $API_KEY" "https://$API_FQDN/outages?limit=1" -o outage.json
+          python -c "import json; o=json.load(open('outage.json'))[0]; json.dump({'cell_id': o['cell_id'], 'outage_start': o['start']}, open('cell.json','w'))"
+          curl -fsS -H "X-API-Key: $API_KEY" -H "Content-Type: application/json" -d @cell.json \
+               "https://$API_FQDN/predict-by-cell" -o bycell.json
+          python -c "import json; r=json.load(open('bycell.json')); print('predict-by-cell OK:', r['prediction']['n_neighbours'], 'neighbours')"
+          # Bad input must be rejected, not crash the service
+          code=$(curl -s -o /dev/null -w "%{http_code}" -H "X-API-Key: $API_KEY" -H "Content-Type: application/json" \
+                 -d '{"outage_start":"bad"}' "https://$API_FQDN/predict"); [ "$code" = "422" ]
+
+      - name: Roll back API if the smoke test failed
+        if: failure() && env.PREV_API_IMAGE != ''
+        run: |
+          echo "Rolling back to $PREV_API_IMAGE"
+          az containerapp update -n "$API_APP" -g "$RESOURCE_GROUP" --image "$PREV_API_IMAGE" -o none
+
+      - name: Deploy UI
+        env:
+          API_KEY: ${{ secrets.API_KEY }}
+        run: |
+          REG="$ACR_NAME.azurecr.io"
+          if az containerapp show -n "$UI_APP" -g "$RESOURCE_GROUP" >/dev/null 2>&1; then
+            az containerapp update -n "$UI_APP" -g "$RESOURCE_GROUP" --image "$REG/neighbour-ui:$TAG" -o none
+          else
+            az containerapp create -n "$UI_APP" -g "$RESOURCE_GROUP" --environment "$ACA_ENV" \
+              --image "$REG/neighbour-ui:$TAG" --registry-server "$REG" \
+              --registry-identity "$IDENTITY_ID" --user-assigned "$IDENTITY_ID" \
+              --target-port 8501 --ingress external --cpu 0.5 --memory 1.0Gi --min-replicas 0 --max-replicas 1 \
+              --secrets api-key="$API_KEY" \
+              --env-vars API_URL="https://$API_FQDN" PUBLIC_API_URL="https://$API_FQDN" API_KEY=secretref:api-key -o none
+          fi
+          UI_FQDN=$(az containerapp show -n "$UI_APP" -g "$RESOURCE_GROUP" --query properties.configuration.ingress.fqdn -o tsv)
+          for i in $(seq 1 30); do curl -fsS "https://$UI_FQDN/_stcore/health" && break; sleep 10; done
+          echo "### Deployed $TAG" >> "$GITHUB_STEP_SUMMARY"
+          echo "- API: https://$API_FQDN/docs" >> "$GITHUB_STEP_SUMMARY"
+          echo "- App: https://$UI_FQDN" >> "$GITHUB_STEP_SUMMARY"

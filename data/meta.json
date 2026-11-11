@@ -1,0 +1,26 @@
+{
+ "mode": "outages",
+ "grid_start": "2025-01-01 00:00:00",
+ "grid_step_h": 3,
+ "week_slots": 56,
+ "lookback_steps": 2,
+ "period_start": "2025-05-24 15:00:00",
+ "period_end": "2025-06-30 21:00:00",
+ "test_period_start": "2025-06-01 00:00:00",
+ "neighbour_source": "listed+site",
+ "raw_kpis": [
+  "Traffic",
+  "Connected_Users",
+  "Throughput",
+  "Latency",
+  "Packet_Loss",
+  "Alarm_Count",
+  "Load",
+  "Capacity"
+ ],
+ "n_cells": 22900,
+ "n_links": 253706,
+ "n_outages": 1403,
+ "n_kpi_rows": 67519,
+ "created_utc": "2026-11-10T05:22:32+00:00"
+}

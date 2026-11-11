@@ -1,0 +1,23 @@
+# Local run of the same two containers that are deployed to Azure: docker compose up --build
+services:
+  api:
+    build: { context: ., dockerfile: Dockerfile.api }
+    ports: ["8000:8000"]
+    environment:
+      API_KEY: ${API_KEY:-local-dev-key}
+      LOG_LEVEL: INFO
+      DEGRADED_THRESHOLD: "0.20"
+      SEVERE_THRESHOLD: "0.50"
+      ALLOW_ANY_TIME: "false"
+    # Uncomment to use a data store from your disk without rebuilding the image (e.g. a large 'full' store):
+    # volumes:
+    #   - ./data:/app/data:ro
+  ui:
+    build: { context: ., dockerfile: Dockerfile.ui }
+    ports: ["8501:8501"]
+    environment:
+      API_URL: http://api:8000                 # how the UI container reaches the API
+      PUBLIC_API_URL: http://localhost:8000    # how your browser reaches the API (links on page 4)
+      API_KEY: ${API_KEY:-local-dev-key}
+    depends_on:
+      api: { condition: service_healthy }

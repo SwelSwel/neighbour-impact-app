@@ -1,0 +1,2138 @@
+[
+ {
+  "split": "test",
+  "event_id": 2621,
+  "cell_id": "UG-KAS-5728-S03",
+  "outage_start": "2025-06-12T15:28:45",
+  "n_absorbing": 10,
+  "neighbours": {
+   "UG-KAS-5010-S02": {
+    "predicted": {
+     "Latency": 104.07563464531758,
+     "Utilization": 87.49823283763762,
+     "Packet_Loss": 0.3701626254379902
+    },
+    "actual": {
+     "Latency": 126.29900360107422,
+     "Utilization": 102.33506774902344,
+     "Packet_Loss": 0.5410000085830688
+    }
+   },
+   "UG-KAS-5978-S03": {
+    "predicted": {
+     "Latency": 125.65490384133545,
+     "Utilization": 171.12032265496242,
+     "Packet_Loss": 1.9652731872729676
+    },
+    "actual": {
+     "Latency": 132.8719940185547,
+     "Utilization": 186.77305603027344,
+     "Packet_Loss": 2.63100004196167
+    }
+   },
+   "UG-KAS-5728-S01": {
+    "predicted": {
+     "Latency": 300.491726342315,
+     "Utilization": 174.89842542694495,
+     "Packet_Loss": 2.0767925072899778
+    },
+    "actual": {
+     "Latency": 267.8609924316406,
+     "Utilization": 153.38116455078125,
+     "Packet_Loss": 2.756999969482422
+    }
+   },
+   "UG-KAS-4229-S04": {
+    "predicted": {
+     "Latency": 39.952588533640544,
+     "Utilization": 236.63612335217337,
+     "Packet_Loss": 2.3034801502564783
+    },
+    "actual": {
+     "Latency": 39.284000396728516,
+     "Utilization": 251.10772705078125,
+     "Packet_Loss": 2.2320001125335693
+    }
+   },
+   "UG-KAS-4601-S04": {
+    "predicted": {
+     "Latency": 47.719128517405196,
+     "Utilization": 155.25273819399425,
+     "Packet_Loss": 1.6104637950000373
+    },
+    "actual": {
+     "Latency": 53.16299819946289,
+     "Utilization": 174.13461303710938,
+     "Packet_Loss": 1.5750000476837158
+    }
+   },
+   "UG-KAS-0155-S03": {
+    "predicted": {
+     "Latency": 65.05861564186628,
+     "Utilization": 123.76877909755103,
+     "Packet_Loss": 1.0308254720757726
+    },
+    "actual": {
+     "Latency": 62.83000183105469,
+     "Utilization": 114.46293640136719,
+     "Packet_Loss": 0.9390000104904175
+    }
+   },
+   "UG-KAS-4886-S04": {
+    "predicted": {
+     "Latency": 44.996873232297574,
+     "Utilization": 226.3777133427647,
+     "Packet_Loss": 2.340101330828661
+    },
+    "actual": {
+     "Latency": 43.354000091552734,
+     "Utilization": 211.86915588378906,
+     "Packet_Loss": 2.5989999771118164
+    }
+   },
+   "UG-KAS-5728-S02": {
+    "predicted": {
+     "Latency": 87.0318956262304,
+     "Utilization": 82.60763642957232,
+     "Packet_Loss": 0.8980662800565818
+    },
+    "actual": {
+     "Latency": 76.2030029296875,
+     "Utilization": 78.86307525634766,
+     "Packet_Loss": 0.8730000257492065
+    }
+   },
+   "UG-KAS-5869-S02": {
+    "predicted": {
+     "Latency": 101.12528121189234,
+     "Utilization": 72.85944376460985,
+     "Packet_Loss": 0.6034736499743932
+    },
+    "actual": {
+     "Latency": 107.1500015258789,
+     "Utilization": 83.99874114990234,
+     "Packet_Loss": 0.6510000228881836
+    }
+   }
+  }
+ },
+ {
+  "split": "test",
+  "event_id": 5622,
+  "cell_id": "UG-MOY-4429-S03",
+  "outage_start": "2025-06-29T02:19:43",
+  "n_absorbing": 10,
+  "neighbours": {
+   "UG-MOY-4771-S01": {
+    "predicted": {
+     "Latency": 223.04242231714755,
+     "Utilization": 100.24560633210545,
+     "Packet_Loss": 1.665177467530992
+    },
+    "actual": {
+     "Latency": 324.0740051269531,
+     "Utilization": 130.3601531982422,
+     "Packet_Loss": 2.0759999752044678
+    }
+   },
+   "UG-MOY-4429-S04": {
+    "predicted": {
+     "Latency": 36.967894167983125,
+     "Utilization": 88.87533909975413,
+     "Packet_Loss": 0.43477060776097826
+    },
+    "actual": {
+     "Latency": 31.57699966430664,
+     "Utilization": 78.9927749633789,
+     "Packet_Loss": 0.17000000178813934
+    }
+   },
+   "UG-MOY-2842-S04": {
+    "predicted": {
+     "Latency": 77.71185393383888,
+     "Utilization": 140.19511641629276,
+     "Packet_Loss": 1.7244145525704322
+    },
+    "actual": {
+     "Latency": 73.1989974975586,
+     "Utilization": 163.49095153808594,
+     "Packet_Loss": 2.13100004196167
+    }
+   },
+   "UG-MOY-4429-S02": {
+    "predicted": {
+     "Latency": 103.98723319634031,
+     "Utilization": 72.00179091109781,
+     "Packet_Loss": 0.439765023851434
+    },
+    "actual": {
+     "Latency": 91.74700164794922,
+     "Utilization": 75.88369750976562,
+     "Packet_Loss": 0.4440000057220459
+    }
+   },
+   "UG-MOY-2072-S03": {
+    "predicted": {
+     "Latency": 60.55492461213532,
+     "Utilization": 79.56560844345388,
+     "Packet_Loss": 0.7187864813130199
+    },
+    "actual": {
+     "Latency": 46.803001403808594,
+     "Utilization": 74.82466888427734,
+     "Packet_Loss": 0.6230000257492065
+    }
+   },
+   "UG-LIR-4428-S01": {
+    "predicted": {
+     "Latency": 231.5068420256694,
+     "Utilization": 97.241712891026,
+     "Packet_Loss": 1.3994202077758473
+    },
+    "actual": {
+     "Latency": 157.1490020751953,
+     "Utilization": 65.48027038574219,
+     "Packet_Loss": 0.8259999752044678
+    }
+   },
+   "UG-MOY-5503-S04": {
+    "predicted": {
+     "Latency": 20.738551884967784,
+     "Utilization": 85.70084140804708,
+     "Packet_Loss": 0.3626931421061302
+    },
+    "actual": {
+     "Latency": 13.430000305175781,
+     "Utilization": 92.26329803466797,
+     "Packet_Loss": 0.36000001430511475
+    }
+   },
+   "UG-MOY-5658-S02": {
+    "predicted": {
+     "Latency": 123.17918487829603,
+     "Utilization": 80.65786148535608,
+     "Packet_Loss": 0.8336092007290177
+    },
+    "actual": {
+     "Latency": 87.79100036621094,
+     "Utilization": 69.55506134033203,
+     "Packet_Loss": 0.5490000247955322
+    }
+   },
+   "UG-MOY-4429-S01": {
+    "predicted": {
+     "Latency": 138.55273756268986,
+     "Utilization": 60.53513647544447,
+     "Packet_Loss": 0.7519465659575825
+    },
+    "actual": {
+     "Latency": 124.19100189208984,
+     "Utilization": 39.46318435668945,
+     "Packet_Loss": 0.7179999947547913
+    }
+   }
+  }
+ },
+ {
+  "split": "test",
+  "event_id": 1727,
+  "cell_id": "UG-MPG-2149-S04",
+  "outage_start": "2025-06-19T19:41:23",
+  "n_absorbing": 13,
+  "neighbours": {
+   "UG-MPG-5105-S01": {
+    "predicted": {
+     "Latency": 242.8283210431161,
+     "Utilization": 233.49540568443112,
+     "Packet_Loss": 2.417918309892654
+    },
+    "actual": {
+     "Latency": 364.8559875488281,
+     "Utilization": 352.4000549316406,
+     "Packet_Loss": 3.2929999828338623
+    }
+   },
+   "UG-MPG-2149-S03": {
+    "predicted": {
+     "Latency": 118.62495173664901,
+     "Utilization": 152.0355371715796,
+     "Packet_Loss": 1.5909369241566313
+    },
+    "actual": {
+     "Latency": 129.45599365234375,
+     "Utilization": 150.99325561523438,
+     "Packet_Loss": 1.7760000228881836
+    }
+   },
+   "UG-MPG-1634-S01": {
+    "predicted": {
+     "Latency": 290.58424383891696,
+     "Utilization": 343.41258353861116,
+     "Packet_Loss": 1.8231401080335858
+    },
+    "actual": {
+     "Latency": 413.1449890136719,
+     "Utilization": 525.9683227539062,
+     "Packet_Loss": 2.7239999771118164
+    }
+   },
+   "UG-MPG-2149-S02": {
+    "predicted": {
+     "Latency": 85.8884354289714,
+     "Utilization": 85.60977685168945,
+     "Packet_Loss": 1.2505694132863343
+    },
+    "actual": {
+     "Latency": 57.46900177001953,
+     "Utilization": 86.71038055419922,
+     "Packet_Loss": 1.152999997138977
+    }
+   },
+   "UG-MPG-3552-S01": {
+    "predicted": {
+     "Latency": 280.65172420076635,
+     "Utilization": 318.89451423198346,
+     "Packet_Loss": 1.6883075194983044
+    },
+    "actual": {
+     "Latency": 314.8940124511719,
+     "Utilization": 259.2062683105469,
+     "Packet_Loss": 2.3410000801086426
+    }
+   },
+   "UG-MPG-3973-S03": {
+    "predicted": {
+     "Latency": 152.5383110401123,
+     "Utilization": 183.11769339658275,
+     "Packet_Loss": 1.9233048854012147
+    },
+    "actual": {
+     "Latency": 161.3800048828125,
+     "Utilization": 175.47805786132812,
+     "Packet_Loss": 1.8700000047683716
+    }
+   },
+   "UG-MPG-3202-S02": {
+    "predicted": {
+     "Latency": 165.99986387130946,
+     "Utilization": 143.227241456941,
+     "Packet_Loss": 1.9225789487116955
+    },
+    "actual": {
+     "Latency": 180.4759979248047,
+     "Utilization": 148.10023498535156,
+     "Packet_Loss": 2.575000047683716
+    }
+   },
+   "UG-MPG-2149-S01": {
+    "predicted": {
+     "Latency": 251.51548060782022,
+     "Utilization": 253.25830399708144,
+     "Packet_Loss": 2.8419618259017696
+    },
+    "actual": {
+     "Latency": 343.0889892578125,
+     "Utilization": 230.87684631347656,
+     "Packet_Loss": 3.4769999980926514
+    }
+   },
+   "UG-MPG-5480-S04": {
+    "predicted": {
+     "Latency": 33.908158889003424,
+     "Utilization": 164.67715266036114,
+     "Packet_Loss": 1.565477103257941
+    },
+    "actual": {
+     "Latency": 25.31100082397461,
+     "Utilization": 143.3834228515625,
+     "Packet_Loss": 1.2599999904632568
+    }
+   },
+   "UG-MPG-4255-S04": {
+    "predicted": {
+     "Latency": 82.39609786611285,
+     "Utilization": 301.36974077534654,
+     "Packet_Loss": 2.4380586626598597
+    },
+    "actual": {
+     "Latency": 68.19499969482422,
+     "Utilization": 391.4238586425781,
+     "Packet_Loss": 2.2720000743865967
+    }
+   },
+   "UG-MPG-0934-S04": {
+    "predicted": {
+     "Latency": 38.36487962457123,
+     "Utilization": 184.04827833200474,
+     "Packet_Loss": 1.970149090479033
+    },
+    "actual": {
+     "Latency": 29.979999542236328,
+     "Utilization": 155.29818725585938,
+     "Packet_Loss": 1.593000054359436
+    }
+   }
+  }
+ },
+ {
+  "split": "test",
+  "event_id": 2898,
+  "cell_id": "UG-ARU-5542-S02",
+  "outage_start": "2025-06-13T17:36:54",
+  "n_absorbing": 13,
+  "neighbours": {
+   "UG-ARU-1109-S02": {
+    "predicted": {
+     "Latency": 62.738720074016484,
+     "Utilization": 81.22030784429727,
+     "Packet_Loss": 0.30790153512546603
+    },
+    "actual": {
+     "Latency": 49.52000045776367,
+     "Utilization": 74.59443664550781,
+     "Packet_Loss": 0.14499999582767487
+    }
+   },
+   "UG-ARU-3316-S01": {
+    "predicted": {
+     "Latency": 165.61076574741017,
+     "Utilization": 95.32344448655927,
+     "Packet_Loss": 1.1319073379960498
+    },
+    "actual": {
+     "Latency": 212.7010040283203,
+     "Utilization": 103.88363647460938,
+     "Packet_Loss": 1.440999984741211
+    }
+   },
+   "UG-ARU-5542-S03": {
+    "predicted": {
+     "Latency": 80.89803050667487,
+     "Utilization": 205.915117989195,
+     "Packet_Loss": 2.1750164617088794
+    },
+    "actual": {
+     "Latency": 80.51399993896484,
+     "Utilization": 206.13758850097656,
+     "Packet_Loss": 2.7209999561309814
+    }
+   },
+   "UG-ARU-0349-S03": {
+    "predicted": {
+     "Latency": 63.87329969726017,
+     "Utilization": 106.83224546811847,
+     "Packet_Loss": 0.9459143405897211
+    },
+    "actual": {
+     "Latency": 75.77799987792969,
+     "Utilization": 113.51575469970703,
+     "Packet_Loss": 0.9279999732971191
+    }
+   },
+   "UG-ARU-0531-S04": {
+    "predicted": {
+     "Latency": 29.281713498477313,
+     "Utilization": 119.07631750164359,
+     "Packet_Loss": 0.9452354847216661
+    },
+    "actual": {
+     "Latency": 31.429000854492188,
+     "Utilization": 113.85621643066406,
+     "Packet_Loss": 0.9039999842643738
+    }
+   },
+   "UG-ARU-5542-S01": {
+    "predicted": {
+     "Latency": 161.04770365669597,
+     "Utilization": 76.26767301748752,
+     "Packet_Loss": 1.2924768820642953
+    },
+    "actual": {
+     "Latency": 145.78199768066406,
+     "Utilization": 77.35701751708984,
+     "Packet_Loss": 1.2339999675750732
+    }
+   },
+   "UG-ARU-5459-S01": {
+    "predicted": {
+     "Latency": 161.56313476342086,
+     "Utilization": 64.90898740160762,
+     "Packet_Loss": 0.7273715370628472
+    },
+    "actual": {
+     "Latency": 160.8730010986328,
+     "Utilization": 59.0224723815918,
+     "Packet_Loss": 0.8529999852180481
+    }
+   },
+   "UG-ARU-1856-S02": {
+    "predicted": {
+     "Latency": 162.4706039300854,
+     "Utilization": 110.69199539252635,
+     "Packet_Loss": 1.131020685015282
+    },
+    "actual": {
+     "Latency": 115.63899993896484,
+     "Utilization": 86.27139282226562,
+     "Packet_Loss": 0.5329999923706055
+    }
+   },
+   "UG-MPG-5541-S01": {
+    "predicted": {
+     "Latency": 158.40733968972378,
+     "Utilization": 78.05468735404008,
+     "Packet_Loss": 0.41966327974794276
+    },
+    "actual": {
+     "Latency": 137.31500244140625,
+     "Utilization": 66.6596450805664,
+     "Packet_Loss": 0.2980000078678131
+    }
+   },
+   "UG-ARU-5542-S04": {
+    "predicted": {
+     "Latency": 33.19624206072098,
+     "Utilization": 138.52654969380072,
+     "Packet_Loss": 1.5498566851201918
+    },
+    "actual": {
+     "Latency": 35.88399887084961,
+     "Utilization": 136.39772033691406,
+     "Packet_Loss": 1.6139999628067017
+    }
+   },
+   "UG-ARU-4728-S01": {
+    "predicted": {
+     "Latency": 111.91495378107273,
+     "Utilization": 81.77007080148465,
+     "Packet_Loss": 1.2796049223531785
+    },
+    "actual": {
+     "Latency": 116.46900177001953,
+     "Utilization": 83.10428619384766,
+     "Packet_Loss": 1.024999976158142
+    }
+   },
+   "UG-ARU-0854-S03": {
+    "predicted": {
+     "Latency": 110.62912146387266,
+     "Utilization": 165.24993115495064,
+     "Packet_Loss": 2.114846206345633
+    },
+    "actual": {
+     "Latency": 123.29399871826172,
+     "Utilization": 167.3896026611328,
+     "Packet_Loss": 1.9709999561309814
+    }
+   },
+   "UG-ARU-4381-S04": {
+    "predicted": {
+     "Latency": 92.37546244312415,
+     "Utilization": 216.68605137813856,
+     "Packet_Loss": 2.411397892606751
+    },
+    "actual": {
+     "Latency": 92.68800354003906,
+     "Utilization": 244.6427459716797,
+     "Packet_Loss": 2.4010000228881836
+    }
+   }
+  }
+ },
+ {
+  "split": "test",
+  "event_id": 1125,
+  "cell_id": "UG-SOR-5064-S01",
+  "outage_start": "2025-06-28T11:32:45",
+  "n_absorbing": 7,
+  "neighbours": {
+   "UG-SOR-5487-S02": {
+    "predicted": {
+     "Latency": 79.92375928352939,
+     "Utilization": 81.98105991984436,
+     "Packet_Loss": 0.35641519570115154
+    },
+    "actual": {
+     "Latency": 80.9800033569336,
+     "Utilization": 87.57901763916016,
+     "Packet_Loss": 0.39500001072883606
+    }
+   },
+   "UG-FTP-5063-S04": {
+    "predicted": {
+     "Latency": 102.12431412545845,
+     "Utilization": 192.63077371244432,
+     "Packet_Loss": 2.104148452042827
+    },
+    "actual": {
+     "Latency": 88.74099731445312,
+     "Utilization": 186.8042449951172,
+     "Packet_Loss": 2.619999885559082
+    }
+   },
+   "UG-SOR-5064-S02": {
+    "predicted": {
+     "Latency": 122.95846668194602,
+     "Utilization": 90.81055198350265,
+     "Packet_Loss": 0.6168693857663776
+    },
+    "actual": {
+     "Latency": 111.08999633789062,
+     "Utilization": 85.71717071533203,
+     "Packet_Loss": 0.46299999952316284
+    }
+   },
+   "UG-SOR-5064-S04": {
+    "predicted": {
+     "Latency": 49.834146078195666,
+     "Utilization": 265.2323036528582,
+     "Packet_Loss": 2.290155756294241
+    },
+    "actual": {
+     "Latency": 52.875,
+     "Utilization": 236.48574829101562,
+     "Packet_Loss": 2.6640000343322754
+    }
+   },
+   "UG-SOR-5064-S03": {
+    "predicted": {
+     "Latency": 51.40554910636288,
+     "Utilization": 146.91334370553977,
+     "Packet_Loss": 1.7214357511397123
+    },
+    "actual": {
+     "Latency": 46.79399871826172,
+     "Utilization": 142.00503540039062,
+     "Packet_Loss": 1.718999981880188
+    }
+   },
+   "UG-SOR-5315-S03": {
+    "predicted": {
+     "Latency": 74.20876611416723,
+     "Utilization": 122.75967223313482,
+     "Packet_Loss": 1.0918353516140489
+    },
+    "actual": {
+     "Latency": 80.12999725341797,
+     "Utilization": 132.2517547607422,
+     "Packet_Loss": 1.2799999713897705
+    }
+   }
+  }
+ },
+ {
+  "split": "test",
+  "event_id": 2593,
+  "cell_id": "UG-IGA-4844-S02",
+  "outage_start": "2025-06-10T09:49:32",
+  "n_absorbing": 12,
+  "neighbours": {
+   "UG-IGA-4844-S03": {
+    "predicted": {
+     "Latency": 67.53329211667074,
+     "Utilization": 118.4531994608808,
+     "Packet_Loss": 0.9892875077141726
+    },
+    "actual": {
+     "Latency": 62.76900100708008,
+     "Utilization": 109.74292755126953,
+     "Packet_Loss": 0.7509999871253967
+    }
+   },
+   "UG-IGA-4259-S01": {
+    "predicted": {
+     "Latency": 142.2470564821807,
+     "Utilization": 62.34252547998892,
+     "Packet_Loss": 1.174474665267103
+    },
+    "actual": {
+     "Latency": 160.40899658203125,
+     "Utilization": 77.95433807373047,
+     "Packet_Loss": 1.0470000505447388
+    }
+   },
+   "UG-IGA-4250-S04": {
+    "predicted": {
+     "Latency": 66.029561679218,
+     "Utilization": 162.1024163502597,
+     "Packet_Loss": 1.6848553352778142
+    },
+    "actual": {
+     "Latency": 68.40899658203125,
+     "Utilization": 155.8558349609375,
+     "Packet_Loss": 1.5290000438690186
+    }
+   },
+   "UG-IGA-4844-S04": {
+    "predicted": {
+     "Latency": 52.017531893239656,
+     "Utilization": 230.75119552010798,
+     "Packet_Loss": 2.3125495316197755
+    },
+    "actual": {
+     "Latency": 48.43899917602539,
+     "Utilization": 209.9532470703125,
+     "Packet_Loss": 2.243000030517578
+    }
+   },
+   "UG-IGA-3397-S01": {
+    "predicted": {
+     "Latency": 159.05041707688972,
+     "Utilization": 77.74058296108092,
+     "Packet_Loss": 0.4906142648696071
+    },
+    "actual": {
+     "Latency": 167.93299865722656,
+     "Utilization": 76.71553039550781,
+     "Packet_Loss": 0.46700000762939453
+    }
+   },
+   "UG-IGA-4844-S01": {
+    "predicted": {
+     "Latency": 151.35594909085918,
+     "Utilization": 65.8252285342102,
+     "Packet_Loss": 1.1780611705908584
+    },
+    "actual": {
+     "Latency": 136.8419952392578,
+     "Utilization": 68.65177154541016,
+     "Packet_Loss": 1.2929999828338623
+    }
+   },
+   "UG-MUB-4843-S01": {
+    "predicted": {
+     "Latency": 154.92273076837532,
+     "Utilization": 71.19415126961665,
+     "Packet_Loss": 0.9167834417187397
+    },
+    "actual": {
+     "Latency": 133.32899475097656,
+     "Utilization": 61.27061462402344,
+     "Packet_Loss": 0.8379999995231628
+    }
+   },
+   "UG-IGA-1907-S01": {
+    "predicted": {
+     "Latency": 120.3500459189048,
+     "Utilization": 84.85022339065338,
+     "Packet_Loss": 1.1625260724229387
+    },
+    "actual": {
+     "Latency": 97.38800048828125,
+     "Utilization": 83.56614685058594,
+     "Packet_Loss": 1.097000002861023
+    }
+   }
+  }
+ },
+ {
+  "split": "test",
+  "event_id": 2339,
+  "cell_id": "UG-KML-3231-S04",
+  "outage_start": "2025-06-08T15:33:50",
+  "n_absorbing": 9,
+  "neighbours": {
+   "UG-KML-4093-S01": {
+    "predicted": {
+     "Latency": 345.9197445273392,
+     "Utilization": 335.2347777028607,
+     "Packet_Loss": 3.087441202759645
+    },
+    "actual": {
+     "Latency": 384.2749938964844,
+     "Utilization": 631.3017578125,
+     "Packet_Loss": 3.4010000228881836
+    }
+   },
+   "UG-KML-0667-S04": {
+    "predicted": {
+     "Latency": 41.033685953547455,
+     "Utilization": 269.39077991285626,
+     "Packet_Loss": 2.4194894731895364
+    },
+    "actual": {
+     "Latency": 38.58599853515625,
+     "Utilization": 295.07781982421875,
+     "Packet_Loss": 2.1029999256134033
+    }
+   },
+   "UG-KML-3231-S03": {
+    "predicted": {
+     "Latency": 159.74627404535997,
+     "Utilization": 179.93335479833027,
+     "Packet_Loss": 2.0364910175643707
+    },
+    "actual": {
+     "Latency": 176.0989990234375,
+     "Utilization": 222.56790161132812,
+     "Packet_Loss": 2.1059999465942383
+    }
+   },
+   "UG-KML-3231-S01": {
+    "predicted": {
+     "Latency": 188.97708020324345,
+     "Utilization": 189.12753376834326,
+     "Packet_Loss": 1.2189692118520041
+    },
+    "actual": {
+     "Latency": 108.96299743652344,
+     "Utilization": 67.82271575927734,
+     "Packet_Loss": 0.6890000104904175
+    }
+   },
+   "UG-KML-1979-S01": {
+    "predicted": {
+     "Latency": 308.25025259094656,
+     "Utilization": 488.70753624520137,
+     "Packet_Loss": 3.278233373316234
+    },
+    "actual": {
+     "Latency": 96.11499786376953,
+     "Utilization": 73.993896484375,
+     "Packet_Loss": 1.3509999513626099
+    }
+   },
+   "UG-KML-0461-S02": {
+    "predicted": {
+     "Latency": 210.28515245922333,
+     "Utilization": 139.69552960269374,
+     "Packet_Loss": 2.0980512996938954
+    },
+    "actual": {
+     "Latency": 319.37200927734375,
+     "Utilization": 257.73785400390625,
+     "Packet_Loss": 2.7019999027252197
+    }
+   },
+   "UG-KML-3779-S01": {
+    "predicted": {
+     "Latency": 454.24657803079015,
+     "Utilization": 503.5333773006856,
+     "Packet_Loss": 3.030568132729313
+    },
+    "actual": {
+     "Latency": 163.02699279785156,
+     "Utilization": 73.30744934082031,
+     "Packet_Loss": 0.8740000128746033
+    }
+   },
+   "UG-KML-3231-S02": {
+    "predicted": {
+     "Latency": 254.59828203156832,
+     "Utilization": 220.7815601885513,
+     "Packet_Loss": 2.520340180551014
+    },
+    "actual": {
+     "Latency": 323.17498779296875,
+     "Utilization": 219.40541076660156,
+     "Packet_Loss": 2.4590001106262207
+    }
+   }
+  }
+ },
+ {
+  "split": "test",
+  "event_id": 2320,
+  "cell_id": "UG-BUS-4036-S02",
+  "outage_start": "2025-06-08T14:31:47",
+  "n_absorbing": 13,
+  "neighbours": {
+   "UG-BUS-2311-S01": {
+    "predicted": {
+     "Latency": 133.06855773827226,
+     "Utilization": 70.24981959120284,
+     "Packet_Loss": 1.262632763746363
+    },
+    "actual": {
+     "Latency": 133.14999389648438,
+     "Utilization": 66.57958221435547,
+     "Packet_Loss": 1.1920000314712524
+    }
+   },
+   "UG-BUS-4036-S03": {
+    "predicted": {
+     "Latency": 55.23503336042257,
+     "Utilization": 135.78652266037417,
+     "Packet_Loss": 1.6230133437354681
+    },
+    "actual": {
+     "Latency": 53.6510009765625,
+     "Utilization": 145.72708129882812,
+     "Packet_Loss": 1.86899995803833
+    }
+   },
+   "UG-BUS-3672-S02": {
+    "predicted": {
+     "Latency": 103.96153795180918,
+     "Utilization": 77.26505767453493,
+     "Packet_Loss": 0.6539391802039364
+    },
+    "actual": {
+     "Latency": 92.28800201416016,
+     "Utilization": 74.36671447753906,
+     "Packet_Loss": 0.6850000023841858
+    }
+   },
+   "UG-BUS-5639-S02": {
+    "predicted": {
+     "Latency": 61.63046551315774,
+     "Utilization": 60.86322579427221,
+     "Packet_Loss": 0.2467353387978847
+    },
+    "actual": {
+     "Latency": 53.26599884033203,
+     "Utilization": 64.14640045166016,
+     "Packet_Loss": 0.2370000034570694
+    }
+   },
+   "UG-BUS-4686-S04": {
+    "predicted": {
+     "Latency": 35.58427544548368,
+     "Utilization": 128.10342598714783,
+     "Packet_Loss": 1.2766459238706191
+    },
+    "actual": {
+     "Latency": 36.26599884033203,
+     "Utilization": 138.1361083984375,
+     "Packet_Loss": 1.3569999933242798
+    }
+   },
+   "UG-BUS-4036-S01": {
+    "predicted": {
+     "Latency": 114.41302455905296,
+     "Utilization": 62.47822873963935,
+     "Packet_Loss": 1.2889489859529906
+    },
+    "actual": {
+     "Latency": 104.37899780273438,
+     "Utilization": 70.36854553222656,
+     "Packet_Loss": 1.4950000047683716
+    }
+   },
+   "UG-BUS-1663-S03": {
+    "predicted": {
+     "Latency": 81.9684303044278,
+     "Utilization": 126.22550734916665,
+     "Packet_Loss": 1.3361684738609838
+    },
+    "actual": {
+     "Latency": 83.08399963378906,
+     "Utilization": 126.12821960449219,
+     "Packet_Loss": 1.4179999828338623
+    }
+   },
+   "UG-BUS-4036-S04": {
+    "predicted": {
+     "Latency": 28.19449327394081,
+     "Utilization": 113.29745137588834,
+     "Packet_Loss": 1.0397867555028906
+    },
+    "actual": {
+     "Latency": 30.634000778198242,
+     "Utilization": 106.84034729003906,
+     "Packet_Loss": 0.9200000166893005
+    }
+   },
+   "UG-BUS-4839-S04": {
+    "predicted": {
+     "Latency": 103.00938070632866,
+     "Utilization": 229.57496103248388,
+     "Packet_Loss": 2.268639794407725
+    },
+    "actual": {
+     "Latency": 104.41699981689453,
+     "Utilization": 197.6773223876953,
+     "Packet_Loss": 2.059000015258789
+    }
+   },
+   "UG-BUS-1788-S04": {
+    "predicted": {
+     "Latency": 32.53764456809377,
+     "Utilization": 120.65695359687524,
+     "Packet_Loss": 0.8428259010670415
+    },
+    "actual": {
+     "Latency": 33.55400085449219,
+     "Utilization": 111.54007720947266,
+     "Packet_Loss": 0.8510000109672546
+    }
+   }
+  }
+ },
+ {
+  "split": "unseen_june",
+  "event_id": 6079,
+  "cell_id": "UG-KML-5385-S01",
+  "outage_start": "2025-06-03T20:15:26",
+  "n_absorbing": 12,
+  "neighbours": {
+   "UG-KML-0667-S01": {
+    "predicted": {
+     "Latency": 147.93408510150272,
+     "Utilization": 75.7602643482317,
+     "Packet_Loss": 0.7486285635966713
+    },
+    "actual": {
+     "Latency": 148.7050018310547,
+     "Utilization": 71.29759216308594,
+     "Packet_Loss": 0.7450000047683716
+    }
+   },
+   "UG-KML-1525-S02": {
+    "predicted": {
+     "Latency": 104.50268475725436,
+     "Utilization": 70.4229147551961,
+     "Packet_Loss": 0.6406697792984664
+    },
+    "actual": {
+     "Latency": 113.71700286865234,
+     "Utilization": 77.38976287841797,
+     "Packet_Loss": 0.7770000100135803
+    }
+   },
+   "UG-KAB-5380-S01": {
+    "predicted": {
+     "Latency": 168.62506705350003,
+     "Utilization": 79.13659111915888,
+     "Packet_Loss": 1.2425143130341607
+    },
+    "actual": {
+     "Latency": 136.24600219726562,
+     "Utilization": 71.53712463378906,
+     "Packet_Loss": 1.1959999799728394
+    }
+   },
+   "UG-KML-5385-S02": {
+    "predicted": {
+     "Latency": 77.0071816397248,
+     "Utilization": 74.96270863923482,
+     "Packet_Loss": 0.6259756842311284
+    },
+    "actual": {
+     "Latency": 67.96299743652344,
+     "Utilization": 67.28888702392578,
+     "Packet_Loss": 0.5649999976158142
+    }
+   },
+   "UG-KML-5205-S01": {
+    "predicted": {
+     "Latency": 148.14813216043396,
+     "Utilization": 60.971535655534026,
+     "Packet_Loss": 0.9652445057482837
+    },
+    "actual": {
+     "Latency": 149.81399536132812,
+     "Utilization": 59.47437286376953,
+     "Packet_Loss": 1.2929999828338623
+    }
+   },
+   "UG-KML-0258-S03": {
+    "predicted": {
+     "Latency": 144.97636434256512,
+     "Utilization": 190.08170615846282,
+     "Packet_Loss": 2.3059666520053526
+    },
+    "actual": {
+     "Latency": 161.1219940185547,
+     "Utilization": 178.0000762939453,
+     "Packet_Loss": 2.5360000133514404
+    }
+   },
+   "UG-KML-2802-S01": {
+    "predicted": {
+     "Latency": 166.9058434316433,
+     "Utilization": 76.52259041983193,
+     "Packet_Loss": 1.077930306184124
+    },
+    "actual": {
+     "Latency": 199.0469970703125,
+     "Utilization": 84.17105865478516,
+     "Packet_Loss": 0.9160000085830688
+    }
+   },
+   "UG-KML-4405-S01": {
+    "predicted": {
+     "Latency": 146.23289506237046,
+     "Utilization": 58.78809298342246,
+     "Packet_Loss": 0.7407092576276569
+    },
+    "actual": {
+     "Latency": 149.3939971923828,
+     "Utilization": 62.847511291503906,
+     "Packet_Loss": 0.6959999799728394
+    }
+   },
+   "UG-KML-2982-S03": {
+    "predicted": {
+     "Latency": 30.487038553777072,
+     "Utilization": 89.37506313425911,
+     "Packet_Loss": 0.39312100198990674
+    },
+    "actual": {
+     "Latency": 36.347999572753906,
+     "Utilization": 92.99413299560547,
+     "Packet_Loss": 0.5320000052452087
+    }
+   },
+   "UG-KML-1523-S01": {
+    "predicted": {
+     "Latency": 138.3050715080789,
+     "Utilization": 78.22174329927623,
+     "Packet_Loss": 1.4211209643000076
+    },
+    "actual": {
+     "Latency": 181.44900512695312,
+     "Utilization": 95.73319244384766,
+     "Packet_Loss": 1.6330000162124634
+    }
+   },
+   "UG-KML-4316-S03": {
+    "predicted": {
+     "Latency": 83.95929595205534,
+     "Utilization": 124.57070706865254,
+     "Packet_Loss": 1.6536760707475824
+    },
+    "actual": {
+     "Latency": 91.92500305175781,
+     "Utilization": 143.74195861816406,
+     "Packet_Loss": 1.753000020980835
+    }
+   },
+   "UG-KML-5385-S03": {
+    "predicted": {
+     "Latency": 60.82352985139124,
+     "Utilization": 104.69697194176655,
+     "Packet_Loss": 0.6897456557689686
+    },
+    "actual": {
+     "Latency": 65.91500091552734,
+     "Utilization": 112.22966003417969,
+     "Packet_Loss": 0.9210000038146973
+    }
+   }
+  }
+ },
+ {
+  "split": "unseen_june",
+  "event_id": 4588,
+  "cell_id": "UG-BUS-5226-S01",
+  "outage_start": "2025-06-30T08:36:00",
+  "n_absorbing": 8,
+  "neighbours": {
+   "UG-BUS-3672-S02": {
+    "predicted": {
+     "Latency": 103.29229501289686,
+     "Utilization": 81.55784907295941,
+     "Packet_Loss": 0.7280546926604741
+    },
+    "actual": {
+     "Latency": 108.29399871826172,
+     "Utilization": 78.24874114990234,
+     "Packet_Loss": 0.7009999752044678
+    }
+   },
+   "UG-BUS-0724-S02": {
+    "predicted": {
+     "Latency": 103.30892223651874,
+     "Utilization": 85.59269688874649,
+     "Packet_Loss": 0.7103175160041818
+    },
+    "actual": {
+     "Latency": 118.71900177001953,
+     "Utilization": 90.01034545898438,
+     "Packet_Loss": 0.6389999985694885
+    }
+   },
+   "UG-BUS-5226-S03": {
+    "predicted": {
+     "Latency": 99.33282407044311,
+     "Utilization": 116.79027561119999,
+     "Packet_Loss": 0.9678119485042831
+    },
+    "actual": {
+     "Latency": 99.01100158691406,
+     "Utilization": 115.37271881103516,
+     "Packet_Loss": 0.8629999756813049
+    }
+   },
+   "UG-BUS-0360-S01": {
+    "predicted": {
+     "Latency": 121.59833426968403,
+     "Utilization": 66.03598315439088,
+     "Packet_Loss": 1.2206385266662045
+    },
+    "actual": {
+     "Latency": 106.39600372314453,
+     "Utilization": 56.15946578979492,
+     "Packet_Loss": 1.2690000534057617
+    }
+   },
+   "UG-BUS-3734-S01": {
+    "predicted": {
+     "Latency": 161.22347654749686,
+     "Utilization": 82.0177576384026,
+     "Packet_Loss": 1.0203291726418673
+    },
+    "actual": {
+     "Latency": 158.79800415039062,
+     "Utilization": 81.7749252319336,
+     "Packet_Loss": 1.1920000314712524
+    }
+   },
+   "UG-BUS-4669-S03": {
+    "predicted": {
+     "Latency": 57.964147880368564,
+     "Utilization": 121.522102455835,
+     "Packet_Loss": 1.161105482441068
+    },
+    "actual": {
+     "Latency": 52.21500015258789,
+     "Utilization": 113.87185668945312,
+     "Packet_Loss": 1.2970000505447388
+    }
+   },
+   "UG-MUK-5224-S02": {
+    "predicted": {
+     "Latency": 126.58363090210192,
+     "Utilization": 80.64824044379067,
+     "Packet_Loss": 0.9078855368794033
+    },
+    "actual": {
+     "Latency": 116.25,
+     "Utilization": 82.41423797607422,
+     "Packet_Loss": 0.9330000281333923
+    }
+   },
+   "UG-BUS-5226-S02": {
+    "predicted": {
+     "Latency": 122.67030169226737,
+     "Utilization": 96.39265851619751,
+     "Packet_Loss": 1.2507863598081614
+    },
+    "actual": {
+     "Latency": 100.63500213623047,
+     "Utilization": 83.5727310180664,
+     "Packet_Loss": 1.0509999990463257
+    }
+   }
+  }
+ },
+ {
+  "split": "unseen_june",
+  "event_id": 5412,
+  "cell_id": "UG-MSK-0050-S02",
+  "outage_start": "2025-06-04T05:43:08",
+  "n_absorbing": 13,
+  "neighbours": {
+   "UG-MSK-4008-S04": {
+    "predicted": {
+     "Latency": 37.118742227672485,
+     "Utilization": 129.54277491196825,
+     "Packet_Loss": 1.4082012664953323
+    },
+    "actual": {
+     "Latency": 37.4900016784668,
+     "Utilization": 127.47876739501953,
+     "Packet_Loss": 1.2920000553131104
+    }
+   },
+   "UG-MSK-0050-S03": {
+    "predicted": {
+     "Latency": 51.390147252081526,
+     "Utilization": 97.20032821087398,
+     "Packet_Loss": 0.6343660977061198
+    },
+    "actual": {
+     "Latency": 62.94900131225586,
+     "Utilization": 118.87958526611328,
+     "Packet_Loss": 0.9670000076293945
+    }
+   },
+   "UG-MSK-3811-S01": {
+    "predicted": {
+     "Latency": 149.1873224663322,
+     "Utilization": 67.24761690577876,
+     "Packet_Loss": 1.383824147059342
+    },
+    "actual": {
+     "Latency": 150.53199768066406,
+     "Utilization": 66.0827865600586,
+     "Packet_Loss": 1.3769999742507935
+    }
+   },
+   "UG-MSK-4171-S04": {
+    "predicted": {
+     "Latency": 57.89933790228137,
+     "Utilization": 175.57716251991212,
+     "Packet_Loss": 1.809454949539971
+    },
+    "actual": {
+     "Latency": 66.58399963378906,
+     "Utilization": 203.78994750976562,
+     "Packet_Loss": 2.3369998931884766
+    }
+   },
+   "UG-MSK-2243-S04": {
+    "predicted": {
+     "Latency": 79.52586296218793,
+     "Utilization": 221.2467482188801,
+     "Packet_Loss": 2.3005349797215735
+    },
+    "actual": {
+     "Latency": 73.27300262451172,
+     "Utilization": 248.8565673828125,
+     "Packet_Loss": 2.447000026702881
+    }
+   },
+   "UG-YUM-0049-S02": {
+    "predicted": {
+     "Latency": 101.82218847731345,
+     "Utilization": 65.34289365580038,
+     "Packet_Loss": 0.2638424008672085
+    },
+    "actual": {
+     "Latency": 90.1729965209961,
+     "Utilization": 58.10335159301758,
+     "Packet_Loss": 0.15700000524520874
+    }
+   },
+   "UG-MSK-2037-S03": {
+    "predicted": {
+     "Latency": 54.07706997512244,
+     "Utilization": 96.84645252145121,
+     "Packet_Loss": 0.6805295119379945
+    },
+    "actual": {
+     "Latency": 74.22200012207031,
+     "Utilization": 114.19123077392578,
+     "Packet_Loss": 1.1339999437332153
+    }
+   },
+   "UG-MSK-3084-S04": {
+    "predicted": {
+     "Latency": 55.51632132867117,
+     "Utilization": 216.1925342462827,
+     "Packet_Loss": 2.215870854455066
+    },
+    "actual": {
+     "Latency": 60.124000549316406,
+     "Utilization": 210.6655731201172,
+     "Packet_Loss": 2.3489999771118164
+    }
+   },
+   "UG-MSK-2826-S01": {
+    "predicted": {
+     "Latency": 151.95844118926138,
+     "Utilization": 66.20096995844548,
+     "Packet_Loss": 0.9884581692806719
+    },
+    "actual": {
+     "Latency": 147.67799377441406,
+     "Utilization": 64.50910186767578,
+     "Packet_Loss": 0.9539999961853027
+    }
+   },
+   "UG-MSK-0050-S01": {
+    "predicted": {
+     "Latency": 134.37045458621395,
+     "Utilization": 60.884182682717324,
+     "Packet_Loss": 0.6957355324315938
+    },
+    "actual": {
+     "Latency": 123.5989990234375,
+     "Utilization": 56.8870849609375,
+     "Packet_Loss": 0.6909999847412109
+    }
+   },
+   "UG-MSK-5908-S04": {
+    "predicted": {
+     "Latency": 27.192907136264914,
+     "Utilization": 185.37687911989022,
+     "Packet_Loss": 1.9102790150678828
+    },
+    "actual": {
+     "Latency": 24.28700065612793,
+     "Utilization": 196.3610382080078,
+     "Packet_Loss": 2.316999912261963
+    }
+   },
+   "UG-MSK-1637-S01": {
+    "predicted": {
+     "Latency": 135.351275066151,
+     "Utilization": 64.98635972341401,
+     "Packet_Loss": 0.29073175121551353
+    },
+    "actual": {
+     "Latency": 135.69400024414062,
+     "Utilization": 62.12540054321289,
+     "Packet_Loss": 0.25
+    }
+   },
+   "UG-MSK-0050-S04": {
+    "predicted": {
+     "Latency": 46.45246960082462,
+     "Utilization": 157.12844873732737,
+     "Packet_Loss": 1.8715033900160651
+    },
+    "actual": {
+     "Latency": 58.33700180053711,
+     "Utilization": 182.20237731933594,
+     "Packet_Loss": 2.234999895095825
+    }
+   }
+  }
+ },
+ {
+  "split": "unseen_june",
+  "event_id": 2451,
+  "cell_id": "UG-BUS-3947-S04",
+  "outage_start": "2025-06-09T18:25:18",
+  "n_absorbing": 12,
+  "neighbours": {
+   "UG-BUS-2590-S01": {
+    "predicted": {
+     "Latency": 338.9333354428792,
+     "Utilization": 203.44188602859285,
+     "Packet_Loss": 1.8304224742325932
+    },
+    "actual": {
+     "Latency": 367.02301025390625,
+     "Utilization": 223.26832580566406,
+     "Packet_Loss": 2.424999952316284
+    }
+   },
+   "UG-BUS-3315-S02": {
+    "predicted": {
+     "Latency": 227.63051197952967,
+     "Utilization": 150.30551791619712,
+     "Packet_Loss": 1.3215521988193053
+    },
+    "actual": {
+     "Latency": 281.5669860839844,
+     "Utilization": 177.19284057617188,
+     "Packet_Loss": 1.9550000429153442
+    }
+   },
+   "UG-BUS-0584-S02": {
+    "predicted": {
+     "Latency": 146.29515978495854,
+     "Utilization": 163.43667366090057,
+     "Packet_Loss": 1.6041332658457257
+    },
+    "actual": {
+     "Latency": 60.7599983215332,
+     "Utilization": 59.587257385253906,
+     "Packet_Loss": 0.4659999907016754
+    }
+   },
+   "UG-BUS-1560-S02": {
+    "predicted": {
+     "Latency": 120.30754505359027,
+     "Utilization": 145.029385564321,
+     "Packet_Loss": 1.9024908365600437
+    },
+    "actual": {
+     "Latency": 109.02200317382812,
+     "Utilization": 116.56407928466797,
+     "Packet_Loss": 1.656000018119812
+    }
+   },
+   "UG-BUS-3947-S02": {
+    "predicted": {
+     "Latency": 149.2080384004241,
+     "Utilization": 126.61466361509409,
+     "Packet_Loss": 1.2806260542145222
+    },
+    "actual": {
+     "Latency": 102.79199981689453,
+     "Utilization": 95.10436248779297,
+     "Packet_Loss": 0.5839999914169312
+    }
+   },
+   "UG-BUS-5003-S03": {
+    "predicted": {
+     "Latency": 116.14894898271437,
+     "Utilization": 205.1011783092204,
+     "Packet_Loss": 2.43517538887694
+    },
+    "actual": {
+     "Latency": 85.5780029296875,
+     "Utilization": 210.6583709716797,
+     "Packet_Loss": 2.7179999351501465
+    }
+   },
+   "UG-BUS-3947-S01": {
+    "predicted": {
+     "Latency": 361.09783312384724,
+     "Utilization": 303.94012676316703,
+     "Packet_Loss": 2.7871480403080455
+    },
+    "actual": {
+     "Latency": 352.91400146484375,
+     "Utilization": 314.5445556640625,
+     "Packet_Loss": 2.7249999046325684
+    }
+   },
+   "UG-BUS-3947-S03": {
+    "predicted": {
+     "Latency": 162.31785615450246,
+     "Utilization": 161.58345650904064,
+     "Packet_Loss": 2.2043682646478873
+    },
+    "actual": {
+     "Latency": 180.13999938964844,
+     "Utilization": 189.44583129882812,
+     "Packet_Loss": 2.187999963760376
+    }
+   },
+   "UG-BUS-0593-S03": {
+    "predicted": {
+     "Latency": 78.96465385311542,
+     "Utilization": 165.9174693351517,
+     "Packet_Loss": 1.885192101404457
+    },
+    "actual": {
+     "Latency": 77.95500183105469,
+     "Utilization": 169.64683532714844,
+     "Packet_Loss": 1.996999979019165
+    }
+   },
+   "UG-BUS-2067-S04": {
+    "predicted": {
+     "Latency": 79.94263345376945,
+     "Utilization": 279.82129011556424,
+     "Packet_Loss": 2.5101324370760314
+    },
+    "actual": {
+     "Latency": 75.68399810791016,
+     "Utilization": 317.3568420410156,
+     "Packet_Loss": 2.4010000228881836
+    }
+   },
+   "UG-BUS-3279-S01": {
+    "predicted": {
+     "Latency": 379.0113305529986,
+     "Utilization": 198.00140520245404,
+     "Packet_Loss": 2.5666304706158862
+    },
+    "actual": {
+     "Latency": 141.0240020751953,
+     "Utilization": 67.95317840576172,
+     "Packet_Loss": 1.2640000581741333
+    }
+   },
+   "UG-LUW-3943-S01": {
+    "predicted": {
+     "Latency": 294.6169969366706,
+     "Utilization": 227.66456271340473,
+     "Packet_Loss": 2.234979877657908
+    },
+    "actual": {
+     "Latency": 115.71299743652344,
+     "Utilization": 49.09425354003906,
+     "Packet_Loss": 0.6589999794960022
+    }
+   }
+  }
+ },
+ {
+  "split": "unseen_june",
+  "event_id": 3859,
+  "cell_id": "UG-TOR-1857-S04",
+  "outage_start": "2025-06-16T19:43:52",
+  "n_absorbing": 13,
+  "neighbours": {
+   "UG-TOR-1857-S03": {
+    "predicted": {
+     "Latency": 82.45497078096801,
+     "Utilization": 217.89114241423945,
+     "Packet_Loss": 2.3599574043828153
+    },
+    "actual": {
+     "Latency": 75.6969985961914,
+     "Utilization": 212.61477661132812,
+     "Packet_Loss": 2.194999933242798
+    }
+   },
+   "UG-TOR-1023-S04": {
+    "predicted": {
+     "Latency": 74.42924641057171,
+     "Utilization": 216.01682370132292,
+     "Packet_Loss": 2.3929126636781715
+    },
+    "actual": {
+     "Latency": 64.67900085449219,
+     "Utilization": 221.63951110839844,
+     "Packet_Loss": 2.6040000915527344
+    }
+   },
+   "UG-TOR-1339-S02": {
+    "predicted": {
+     "Latency": 95.13628844627873,
+     "Utilization": 101.9788974659853,
+     "Packet_Loss": 1.0400612015086579
+    },
+    "actual": {
+     "Latency": 114.97000122070312,
+     "Utilization": 108.28203582763672,
+     "Packet_Loss": 1.4639999866485596
+    }
+   },
+   "UG-TOR-0792-S01": {
+    "predicted": {
+     "Latency": 254.04674404899927,
+     "Utilization": 157.35820220655714,
+     "Packet_Loss": 2.3187514717464506
+    },
+    "actual": {
+     "Latency": 239.88999938964844,
+     "Utilization": 147.9976043701172,
+     "Packet_Loss": 2.4119999408721924
+    }
+   },
+   "UG-TOR-5846-S01": {
+    "predicted": {
+     "Latency": 406.0573697027089,
+     "Utilization": 139.4257695729853,
+     "Packet_Loss": 1.378787937985515
+    },
+    "actual": {
+     "Latency": 321.75299072265625,
+     "Utilization": 133.1565399169922,
+     "Packet_Loss": 1.406000018119812
+    }
+   },
+   "UG-TOR-3872-S01": {
+    "predicted": {
+     "Latency": 351.1961271154144,
+     "Utilization": 156.433868776575,
+     "Packet_Loss": 2.1394331596200553
+    },
+    "actual": {
+     "Latency": 364.3030090332031,
+     "Utilization": 145.64454650878906,
+     "Packet_Loss": 2.2309999465942383
+    }
+   },
+   "UG-TOR-1114-S03": {
+    "predicted": {
+     "Latency": 94.06196312193086,
+     "Utilization": 112.4953035076181,
+     "Packet_Loss": 1.3571752973801121
+    },
+    "actual": {
+     "Latency": 84.88899993896484,
+     "Utilization": 103.28942108154297,
+     "Packet_Loss": 1.274999976158142
+    }
+   },
+   "UG-TOR-0639-S01": {
+    "predicted": {
+     "Latency": 314.2321514428816,
+     "Utilization": 182.10973444998925,
+     "Packet_Loss": 2.5504814566932907
+    },
+    "actual": {
+     "Latency": 354.5360107421875,
+     "Utilization": 242.81398010253906,
+     "Packet_Loss": 3.4649999141693115
+    }
+   },
+   "UG-TOR-1467-S02": {
+    "predicted": {
+     "Latency": 103.81472350111105,
+     "Utilization": 113.60078998475153,
+     "Packet_Loss": 1.291721950912358
+    },
+    "actual": {
+     "Latency": 133.24000549316406,
+     "Utilization": 136.5402069091797,
+     "Packet_Loss": 1.8509999513626099
+    }
+   },
+   "UG-TOR-1857-S02": {
+    "predicted": {
+     "Latency": 110.06542706026042,
+     "Utilization": 126.13723394198337,
+     "Packet_Loss": 1.6526375880619126
+    },
+    "actual": {
+     "Latency": 85.06700134277344,
+     "Utilization": 112.84945678710938,
+     "Packet_Loss": 1.4019999504089355
+    }
+   },
+   "UG-TOR-3863-S01": {
+    "predicted": {
+     "Latency": 234.93414041953227,
+     "Utilization": 157.2322218303837,
+     "Packet_Loss": 2.4199797774667435
+    },
+    "actual": {
+     "Latency": 268.3080139160156,
+     "Utilization": 181.27513122558594,
+     "Packet_Loss": 3.256999969482422
+    }
+   },
+   "UG-TOR-1857-S01": {
+    "predicted": {
+     "Latency": 174.18761156548894,
+     "Utilization": 56.892056694070774,
+     "Packet_Loss": 0.7478133303388266
+    },
+    "actual": {
+     "Latency": 138.68600463867188,
+     "Utilization": 59.273014068603516,
+     "Packet_Loss": 0.6729999780654907
+    }
+   },
+   "UG-TOR-1960-S04": {
+    "predicted": {
+     "Latency": 67.25450144991002,
+     "Utilization": 232.32571425662783,
+     "Packet_Loss": 2.4057580284857
+    },
+    "actual": {
+     "Latency": 70.6969985961914,
+     "Utilization": 225.54417419433594,
+     "Packet_Loss": 2.2190001010894775
+    }
+   }
+  }
+ },
+ {
+  "split": "unseen_june",
+  "event_id": 1290,
+  "cell_id": "UG-MOY-3608-S02",
+  "outage_start": "2025-06-24T17:45:51",
+  "n_absorbing": 12,
+  "neighbours": {
+   "UG-MOY-3455-S04": {
+    "predicted": {
+     "Latency": 61.507531618989326,
+     "Utilization": 154.1830369663056,
+     "Packet_Loss": 1.5887989765705315
+    },
+    "actual": {
+     "Latency": 67.91300201416016,
+     "Utilization": 179.14630126953125,
+     "Packet_Loss": 2.234999895095825
+    }
+   },
+   "UG-MOY-2355-S01": {
+    "predicted": {
+     "Latency": 117.3326999569687,
+     "Utilization": 81.52521103469836,
+     "Packet_Loss": 0.591266922695875
+    },
+    "actual": {
+     "Latency": 128.96499633789062,
+     "Utilization": 91.5509262084961,
+     "Packet_Loss": 0.8100000023841858
+    }
+   },
+   "UG-MOY-4771-S04": {
+    "predicted": {
+     "Latency": 86.51640578098191,
+     "Utilization": 276.77378908281,
+     "Packet_Loss": 2.2985266906869515
+    },
+    "actual": {
+     "Latency": 86.88899993896484,
+     "Utilization": 233.0299072265625,
+     "Packet_Loss": 2.380000114440918
+    }
+   },
+   "UG-MOY-3821-S02": {
+    "predicted": {
+     "Latency": 60.544929857887475,
+     "Utilization": 71.37187601796829,
+     "Packet_Loss": 0.31153703816750916
+    },
+    "actual": {
+     "Latency": 52.85200119018555,
+     "Utilization": 74.70848846435547,
+     "Packet_Loss": 0.33000001311302185
+    }
+   },
+   "UG-MOY-0038-S04": {
+    "predicted": {
+     "Latency": 75.40208680635523,
+     "Utilization": 211.7096527796663,
+     "Packet_Loss": 2.2095797843747595
+    },
+    "actual": {
+     "Latency": 79.31099700927734,
+     "Utilization": 189.59889221191406,
+     "Packet_Loss": 2.055999994277954
+    }
+   },
+   "UG-MOY-3608-S01": {
+    "predicted": {
+     "Latency": 185.67083989323896,
+     "Utilization": 81.00856704734441,
+     "Packet_Loss": 1.0812066584702238
+    },
+    "actual": {
+     "Latency": 165.04100036621094,
+     "Utilization": 73.0396728515625,
+     "Packet_Loss": 1.00600004196167
+    }
+   },
+   "UG-MOY-4465-S04": {
+    "predicted": {
+     "Latency": 34.91013505190038,
+     "Utilization": 154.26597978749382,
+     "Packet_Loss": 1.5730219534762448
+    },
+    "actual": {
+     "Latency": 36.551998138427734,
+     "Utilization": 166.0308837890625,
+     "Packet_Loss": 1.8519999980926514
+    }
+   },
+   "UG-MOY-5216-S01": {
+    "predicted": {
+     "Latency": 127.61713779058161,
+     "Utilization": 66.64257417891852,
+     "Packet_Loss": 1.417856378904733
+    },
+    "actual": {
+     "Latency": 110.22599792480469,
+     "Utilization": 61.57748031616211,
+     "Packet_Loss": 1.5429999828338623
+    }
+   },
+   "UG-MOY-3608-S04": {
+    "predicted": {
+     "Latency": 30.776219193159214,
+     "Utilization": 295.34460414854766,
+     "Packet_Loss": 2.372588786962171
+    },
+    "actual": {
+     "Latency": 29.666000366210938,
+     "Utilization": 295.46624755859375,
+     "Packet_Loss": 2.513000011444092
+    }
+   },
+   "UG-MOY-4609-S03": {
+    "predicted": {
+     "Latency": 143.7186271394455,
+     "Utilization": 199.37074385813153,
+     "Packet_Loss": 2.3383744348005644
+    },
+    "actual": {
+     "Latency": 161.16400146484375,
+     "Utilization": 191.75599670410156,
+     "Packet_Loss": 2.9159998893737793
+    }
+   },
+   "UG-MUK-3603-S01": {
+    "predicted": {
+     "Latency": 153.5524806468957,
+     "Utilization": 92.93142381609863,
+     "Packet_Loss": 1.6937034295761113
+    },
+    "actual": {
+     "Latency": 119.23300170898438,
+     "Utilization": 72.22881317138672,
+     "Packet_Loss": 1.5299999713897705
+    }
+   },
+   "UG-MOY-3608-S03": {
+    "predicted": {
+     "Latency": 82.21830257893345,
+     "Utilization": 118.51615487334028,
+     "Packet_Loss": 1.410516679585019
+    },
+    "actual": {
+     "Latency": 88.93199920654297,
+     "Utilization": 134.13116455078125,
+     "Packet_Loss": 1.63100004196167
+    }
+   }
+  }
+ },
+ {
+  "split": "unseen_june",
+  "event_id": 4228,
+  "cell_id": "UG-MPG-4596-S04",
+  "outage_start": "2025-06-09T07:08:33",
+  "n_absorbing": 11,
+  "neighbours": {
+   "UG-MPG-3372-S02": {
+    "predicted": {
+     "Latency": 87.17041211759107,
+     "Utilization": 109.91864332524207,
+     "Packet_Loss": 1.3425742607363582
+    },
+    "actual": {
+     "Latency": 98.87000274658203,
+     "Utilization": 108.23915100097656,
+     "Packet_Loss": 1.312000036239624
+    }
+   },
+   "UG-MPG-4596-S03": {
+    "predicted": {
+     "Latency": 76.93020717125414,
+     "Utilization": 116.76945805656241,
+     "Packet_Loss": 1.5931932725561428
+    },
+    "actual": {
+     "Latency": 58.124000549316406,
+     "Utilization": 109.26197814941406,
+     "Packet_Loss": 1.4800000190734863
+    }
+   },
+   "UG-MPG-4596-S01": {
+    "predicted": {
+     "Latency": 136.17350498470122,
+     "Utilization": 62.672517176482316,
+     "Packet_Loss": 1.1068192314689025
+    },
+    "actual": {
+     "Latency": 103.11199951171875,
+     "Utilization": 58.90571594238281,
+     "Packet_Loss": 0.8849999904632568
+    }
+   },
+   "UG-MPG-3011-S01": {
+    "predicted": {
+     "Latency": 451.8666272075802,
+     "Utilization": 234.8610128174332,
+     "Packet_Loss": 2.5332202949726432
+    },
+    "actual": {
+     "Latency": 152.56900024414062,
+     "Utilization": 67.2828140258789,
+     "Packet_Loss": 0.625
+    }
+   },
+   "UG-MPG-5932-S03": {
+    "predicted": {
+     "Latency": 43.98645154176169,
+     "Utilization": 109.11244858059474,
+     "Packet_Loss": 0.8005162336819157
+    },
+    "actual": {
+     "Latency": 55.33000183105469,
+     "Utilization": 119.79338836669922,
+     "Packet_Loss": 0.9350000023841858
+    }
+   },
+   "UG-MPG-3160-S01": {
+    "predicted": {
+     "Latency": 223.42282545859607,
+     "Utilization": 208.87504703231065,
+     "Packet_Loss": 2.144205752846802
+    },
+    "actual": {
+     "Latency": 293.3819885253906,
+     "Utilization": 283.1432189941406,
+     "Packet_Loss": 3.059000015258789
+    }
+   },
+   "UG-BUS-4595-S01": {
+    "predicted": {
+     "Latency": 379.45252708211507,
+     "Utilization": 252.68783888151157,
+     "Packet_Loss": 2.0307871403438935
+    },
+    "actual": {
+     "Latency": 148.34300231933594,
+     "Utilization": 51.110172271728516,
+     "Packet_Loss": 0.593999981880188
+    }
+   },
+   "UG-MPG-4596-S02": {
+    "predicted": {
+     "Latency": 189.92924733906452,
+     "Utilization": 156.77222533069954,
+     "Packet_Loss": 2.069154222229321
+    },
+    "actual": {
+     "Latency": 182.4459991455078,
+     "Utilization": 131.2593994140625,
+     "Packet_Loss": 1.7079999446868896
+    }
+   },
+   "UG-MPG-1815-S01": {
+    "predicted": {
+     "Latency": 252.0955817847623,
+     "Utilization": 193.39772118172922,
+     "Packet_Loss": 1.7530851941871477
+    },
+    "actual": {
+     "Latency": 421.7170104980469,
+     "Utilization": 230.1810760498047,
+     "Packet_Loss": 2.121000051498413
+    }
+   },
+   "UG-MPG-2161-S01": {
+    "predicted": {
+     "Latency": 324.3630744896327,
+     "Utilization": 217.03759349954842,
+     "Packet_Loss": 2.676899494285647
+    },
+    "actual": {
+     "Latency": 294.0469970703125,
+     "Utilization": 157.10614013671875,
+     "Packet_Loss": 2.755000114440918
+    }
+   },
+   "UG-MPG-0251-S03": {
+    "predicted": {
+     "Latency": 75.96559685872849,
+     "Utilization": 177.98617965594715,
+     "Packet_Loss": 2.2634084664139027
+    },
+    "actual": {
+     "Latency": 80.19200134277344,
+     "Utilization": 205.0202178955078,
+     "Packet_Loss": 2.3989999294281006
+    }
+   }
+  }
+ },
+ {
+  "split": "unseen_june",
+  "event_id": 2214,
+  "cell_id": "UG-SOR-4403-S03",
+  "outage_start": "2025-06-10T14:34:17",
+  "n_absorbing": 11,
+  "neighbours": {
+   "UG-SOR-3120-S01": {
+    "predicted": {
+     "Latency": 252.62119543071267,
+     "Utilization": 119.41172302032207,
+     "Packet_Loss": 2.042477873329759
+    },
+    "actual": {
+     "Latency": 331.8429870605469,
+     "Utilization": 145.46148681640625,
+     "Packet_Loss": 2.2070000171661377
+    }
+   },
+   "UG-SOR-3382-S01": {
+    "predicted": {
+     "Latency": 281.11740790345596,
+     "Utilization": 103.3609176398133,
+     "Packet_Loss": 1.413767978486371
+    },
+    "actual": {
+     "Latency": 370.83099365234375,
+     "Utilization": 131.0749969482422,
+     "Packet_Loss": 1.8990000486373901
+    }
+   },
+   "UG-SOR-4403-S02": {
+    "predicted": {
+     "Latency": 90.63313887316183,
+     "Utilization": 86.71570019836498,
+     "Packet_Loss": 0.245986802879577
+    },
+    "actual": {
+     "Latency": 69.08200073242188,
+     "Utilization": 77.13516998291016,
+     "Packet_Loss": 0.19599999487400055
+    }
+   },
+   "UG-SOR-4403-S01": {
+    "predicted": {
+     "Latency": 148.0616821966963,
+     "Utilization": 76.19849103282895,
+     "Packet_Loss": 1.4599457182358715
+    },
+    "actual": {
+     "Latency": 145.66799926757812,
+     "Utilization": 56.96553039550781,
+     "Packet_Loss": 1.1829999685287476
+    }
+   },
+   "UG-HOI-4402-S01": {
+    "predicted": {
+     "Latency": 207.4341455438625,
+     "Utilization": 126.76828071020267,
+     "Packet_Loss": 1.8276938356133223
+    },
+    "actual": {
+     "Latency": 97.44100189208984,
+     "Utilization": 57.032840728759766,
+     "Packet_Loss": 0.8119999766349792
+    }
+   },
+   "UG-SOR-0199-S01": {
+    "predicted": {
+     "Latency": 180.8030021871279,
+     "Utilization": 89.6361035085558,
+     "Packet_Loss": 1.2608194911690231
+    },
+    "actual": {
+     "Latency": 142.40699768066406,
+     "Utilization": 86.73280334472656,
+     "Packet_Loss": 0.9950000047683716
+    }
+   },
+   "UG-SOR-4403-S04": {
+    "predicted": {
+     "Latency": 37.984873692310124,
+     "Utilization": 240.7448304560909,
+     "Packet_Loss": 2.295548333630812
+    },
+    "actual": {
+     "Latency": 44.99800109863281,
+     "Utilization": 219.0064239501953,
+     "Packet_Loss": 2.742000102996826
+    }
+   },
+   "UG-SOR-4875-S01": {
+    "predicted": {
+     "Latency": 150.86878927042474,
+     "Utilization": 91.93172739570272,
+     "Packet_Loss": 1.6014951522431238
+    },
+    "actual": {
+     "Latency": 166.1699981689453,
+     "Utilization": 100.5708236694336,
+     "Packet_Loss": 1.6710000038146973
+    }
+   },
+   "UG-SOR-0536-S01": {
+    "predicted": {
+     "Latency": 198.0547290109234,
+     "Utilization": 115.37208782269892,
+     "Packet_Loss": 1.8488502832389562
+    },
+    "actual": {
+     "Latency": 213.97900390625,
+     "Utilization": 129.32579040527344,
+     "Packet_Loss": 1.9700000286102295
+    }
+   },
+   "UG-SOR-2169-S02": {
+    "predicted": {
+     "Latency": 152.059538328879,
+     "Utilization": 93.28767887891141,
+     "Packet_Loss": 0.9355116427508933
+    },
+    "actual": {
+     "Latency": 168.375,
+     "Utilization": 100.89080047607422,
+     "Packet_Loss": 0.9829999804496765
+    }
+   },
+   "UG-SOR-5005-S03": {
+    "predicted": {
+     "Latency": 117.41300676040606,
+     "Utilization": 152.5186010943591,
+     "Packet_Loss": 2.0290081493108705
+    },
+    "actual": {
+     "Latency": 132.8769989013672,
+     "Utilization": 140.79531860351562,
+     "Packet_Loss": 2.0820000171661377
+    }
+   }
+  }
+ }
+]
