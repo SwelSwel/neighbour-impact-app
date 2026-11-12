@@ -4,7 +4,8 @@
 set -euo pipefail
 
 # ---- edit these ----------------------------------------------------------------------------------------------
-LOCATION="southeastasia"                 # Singapore; close to Bangkok
+LOCATION="eastasia"                      # Hong Kong. Azure for Students only allows some regions: list yours with
+                                         #   az policy assignment list --query "[].parameters" -o json
 RG="rg-neighbour-impact"
 ACR="acrneighbour$RANDOM"                # must be globally unique, lowercase letters/digits only
 ACA_ENV="aca-neighbour-env"
@@ -12,7 +13,7 @@ LAW="law-neighbour-impact"
 IDENTITY="id-neighbour-acrpull"
 API_APP="neighbour-api"
 UI_APP="neighbour-ui"
-GITHUB_REPO="your-github-user/neighbour-impact-app"   # owner/repo
+GITHUB_REPO="SwelSwel/neighbour-impact-app"   # owner/repo; the repo must exist before you run this
 # ---------------------------------------------------------------------------------------------------------------
 
 SUB_ID=$(az account show --query id -o tsv)
@@ -50,6 +51,16 @@ SP_ID=$(az ad sp create --id "$APP_ID" --query id -o tsv)
 az ad app federated-credential create --id "$APP_ID" --parameters "{
   \"name\": \"github-main\", \"issuer\": \"https://token.actions.githubusercontent.com\",
   \"subject\": \"repo:$GITHUB_REPO:environment:production\", \"audiences\": [\"api://AzureADTokenExchange\"]}" -o none
+# GitHub now sends a subject that also contains the owner's and repo's numeric IDs
+# (repo:owner@ownerId/repo@repoId:environment:production), so trust that form too.
+GH_IDS=$(curl -fsS "https://api.github.com/repos/$GITHUB_REPO" | jq -r '"\(.owner.login)@\(.owner.id)/\(.name)@\(.id)"' || true)
+if [ -n "$GH_IDS" ]; then
+  az ad app federated-credential create --id "$APP_ID" --parameters "{
+    \"name\": \"github-production-ids\", \"issuer\": \"https://token.actions.githubusercontent.com\",
+    \"subject\": \"repo:$GH_IDS:environment:production\", \"audiences\": [\"api://AzureADTokenExchange\"]}" -o none
+else
+  echo "   Could not read the repo IDs from GitHub. If the login step fails, add the subject printed in its error message."
+fi
 RG_ID=$(az group show -n "$RG" --query id -o tsv)
 az role assignment create --assignee-object-id "$SP_ID" --assignee-principal-type ServicePrincipal \
   --role Contributor --scope "$RG_ID" -o none

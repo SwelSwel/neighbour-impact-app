@@ -17,7 +17,33 @@ same 66 features and runs the three Gradient Boosting models trained in `Neighbo
 
 ---
 
+## Live application
+
+| | Address |
+|---|---|
+| Website | `https://neighbour-ui.politefield-0864fbc1.eastasia.azurecontainerapps.io` *(from the latest GitHub Actions run summary)* |
+| API docs | `https://neighbour-api.politefield-0864fbc1.eastasia.azurecontainerapps.io/docs` |
+
+The website needs no login. The API's prediction endpoints need an `X-API-Key` header; the key is shared with the
+evaluators separately and is never stored in this repository. `/health` and `/ready` need no key. Both apps scale to
+zero when idle, so the first visit can take up to 30 seconds.
+
+---
+
 ## 1. Get the files from the notebook
+
+**Reproducing the notebook from the raw data.** The raw datasets are not in this repository (they are course data
+and too large for GitHub). Put `Dataset_1_Cell_Information.csv` and `2025_01.csv` to `2025_06.csv` in one folder, and
+point the notebook to it with the `TELECOM_DATA_DIR` environment variable (or edit the default path in section 1):
+
+```bash
+pip install -r requirements-notebook.txt
+setx TELECOM_DATA_DIR "C:\path\to\Data"      # Windows (new terminal afterwards). macOS/Linux: export TELECOM_DATA_DIR=...
+```
+
+Running the notebook top to bottom reproduces every experiment (`RANDOM_STATE = 42`) and writes its outputs to
+`<data folder>/impact_outputs/`, outside this repository. The app's `data/` and `models/` files then come from that
+run, as follows.
 
 1. Open `Neighbour_Impact_Prediction_final.ipynb` and `pip install pyarrow`. Then either:
    - **Kernel still has everything loaded** (you just ran the whole notebook): add a cell after section 19b, open
@@ -79,10 +105,47 @@ docker compose up --build
 
 ## 4. Deploy to Azure
 
-Unchanged from before: run `infra/setup_azure.sh` once, add the secrets and variables it prints to GitHub, and push
-to `main`. The pipeline tests, builds both images (the API image now includes `data/`), deploys, and smoke-tests
-`/predict` **and** `/predict-by-cell`. If either fails, it rolls back. For a `"full"` data store, change
-`--memory 1.0Gi` to `--memory 2.0Gi` (and `--cpu 1.0`) for the API in `.github/workflows/ci-cd.yml`.
+**Architecture.** Two containers on Azure Container Apps (region East Asia), images in Azure Container Registry,
+container logs in Log Analytics. The website calls the API over HTTPS; only the API holds the model.
+
+**One-time set-up** (Azure Cloud Shell, Bash):
+
+1. Create the GitHub repository first (empty), then edit `GITHUB_REPO` (and `LOCATION` if needed) at the top of
+   `infra/setup_azure.sh`, and run `bash infra/setup_azure.sh`. It creates the resource group, registry, log
+   workspace, Container Apps environment, a managed identity that pulls images (no registry password), and the
+   GitHub login (OpenID Connect: no Azure password or client secret is stored anywhere).
+2. In GitHub → Settings: create the environment `production`; add the 4 secrets and 6 variables the script prints.
+3. Push to `main`.
+
+**CI/CD** (`.github/workflows/ci-cd.yml`):
+
+| Event | What runs |
+|---|---|
+| Pull request into `main` | Tests only |
+| Push to `main`, or "Run workflow" | Tests → build both images (tagged with the commit ID) → push to the registry → deploy the API → smoke test `/health`, `/ready`, `/predict`, `/predict-by-cell` and a bad request (422) → **roll back the API if the smoke test fails** → deploy the website and check its health |
+
+Settings in the `az containerapp create` commands (CPU, memory, environment variables) apply only the first time an
+app is created. To change them later, use `az containerapp update ... --set-env-vars` or `--cpu/--memory`.
+For a `"full"` data store, the API needs `--memory 2.0Gi` and `--cpu 1.0`.
+
+**Troubleshooting.**
+
+| Error | Fix |
+|---|---|
+| `RequestDisallowedByAzure` when creating resources | The region is not allowed for the subscription; pick one from the list in the `LOCATION` comment |
+| Login step: `AADSTS700213 No matching federated identity record` | Add a federated credential whose subject is exactly the one in the error message (`az ad app federated-credential create`) |
+
+**Monitoring.** `/health` (process up) and `/ready` (model and data loaded) are used by Docker and Azure health
+probes. The API writes one JSON log line per request, with a request ID that is also returned in the `x-request-id`
+header. Logs are queried in the Log Analytics workspace, for example:
+
+```
+ContainerAppConsoleLogs_CL | where ContainerAppName_s == "neighbour-api" | order by TimeGenerated desc | take 50
+```
+
+**Cost.** Both apps scale to zero when idle (`--min-replicas 0`), so idle time costs almost nothing; the Basic
+registry (about USD 5 a month) is the main fixed cost. Builds run on GitHub's free runners. To remove everything
+after the course: `az group delete -n rg-neighbour-impact --yes`.
 
 ---
 
@@ -108,6 +171,7 @@ app/                         the API (FastAPI)
     ├── kpi_store.py         KPI readings indexed by (cell, slot)
     ├── outages.py           OUTAGE/RECOVERY pairing, "down" rule, cells already down on a site
     ├── dataset2.py          reads an uploaded Dataset 2 file with the notebook's rules
+    ├── new_cells.py         reads an uploaded new-cells file (Dataset 1 format) for one request
     └── lookup.py            cell + time -> the full model input (mirrors notebook section 8)
 ui/                          the website (Streamlit)
 ├── Home.py                  start page
@@ -118,8 +182,11 @@ ui/                          the website (Streamlit)
     ├── pickers.py           outage list with filters; cell + time picker
     ├── case.py              the editable input tables
     ├── results.py           summary numbers and the results table
-    └── layout.py            page frame, sidebar status, inputs -> predict -> results section
-notebook/19c_export_app_data.py   the notebook cell that writes data/
+    ├── layout.py            page frame, inputs -> predict -> results section
+    └── templates.py         column guides and templates for the upload page
+notebook/                    the training notebook and the cells that export data/ and models/
+infra/setup_azure.sh         one-time Azure set-up
+.github/workflows/ci-cd.yml  the CI/CD pipeline
 tests/                       consistency with the notebook, API behaviour, failure scenarios
 ```
 
@@ -138,7 +205,7 @@ tests/                       consistency with the notebook, API behaviour, failu
 
 ## 6. Tests
 
-`pytest` runs 40 tests. The data-store tests are skipped if `data/` is empty.
+`pytest` runs 45 tests. The data-store tests are skipped if `data/` is empty.
 
 - **Training/production consistency:**
   - Features and predictions match the notebook on 25 exported rows.
@@ -152,12 +219,18 @@ tests/                       consistency with the notebook, API behaviour, failu
   - invalid values, unknown fields, duplicate neighbours, too many neighbours (422);
   - an unknown cell (404);
   - a time outside the stored data, or not a real outage in `"outages"` mode (422);
-  - a CSV with the wrong columns, no usable rows, or a corrupt ZIP (422).
+  - a CSV with the wrong columns, no usable rows, or a corrupt ZIP (422);
+  - a new-cells file with cells that already exist in Dataset 1 (422).
 - **Missing values:** blank KPIs are accepted and treated as missing, as in training.
 
 ## 7. Limitations
 
 - Lookups only cover the stored period (June 2025 plus one week before). A live system would read the same inputs
   from the operator's KPI database. Swapping that in means replacing `KPIStore`; the rest of the app stays the same.
-- Uploaded files use the neighbour links from Dataset 1. Cells that are not in Dataset 1 are ignored.
+- Uploaded files use the neighbour links from Dataset 1. Readings for cells that are not in Dataset 1 are ignored
+  unless those cells are described in a new-cells file uploaded with them (page 3, option 2); new cells are not saved.
 - What-if changes outside the range seen in training (for example 3× load) are extrapolations.
+- The website has no login. It is a demo; a real deployment would add sign-in in front of it.
+- The models were trained and evaluated on one operator's data from January to June 2025. Their accuracy on later
+  data is not monitored automatically yet: a live system would compare each prediction with the reading that
+  arrives three hours later and track the error over time.
